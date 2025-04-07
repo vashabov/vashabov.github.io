@@ -1,0 +1,181 @@
+:root {
+   --red: #d82e21;
+   --red-dark: #8b0000;
+   --white: #fff;
+   --h1: 36px;
+   --font: "Comic Sans MS"
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit;
+    font-style: inherit;
+}
+
+
+.main img {
+    width: 100%;
+}
+
+
+.about_wrapper {
+    
+    display: flex;
+    align-items: center;
+}
+.about img {
+    width: 300px;
+    border-radius: 30px;
+    margin-right: 20px;
+}
+
+
+.about h1 {
+    font-size: 36px;
+
+}
+
+.about a {
+    color: var(--white);
+    background-color: var(--red);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+
+.about a:hover {
+    background-color: var(--red-dark);
+}
+
+
+.gallery {
+    background-color: var(--red);
+}
+
+
+
+.gallery h2 {
+    color: var(--white);
+    text-align: center;
+
+    text-shadow: 2px 2px 4px #000000;
+    
+}
+
+.gallery_images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px #000;
+}
+
+
+.support {
+    background-color: #2b2e82;
+}
+
+
+.support h2 {
+    color: var(--white);
+    text-align: center;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px #000000;
+    
+}
+
+.support form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.support input,
+.support textarea {
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.support textarea{
+    height: 150px;
+}
+
+
+.support button {
+    color: var(--white);
+    background-color: var(--red);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    width: auto;
+    cursor: pointer;
+}
+
+
+.support button:hover {
+    background-color: var(--red-dark);
+}
+
+
+@media screen and (max-width: 700px) {
+    .about_wrapper {
+        flex-direction: column;
+    }
+    .gallery_images {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .gallery_images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
